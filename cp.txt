@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghost COD Points</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #0d1117;
+  color: white;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header img {
+  width: 200px;
+  border-radius: 15px;
+}
+
+h1 {
+  margin-top: 10px;
+  color: #00ffcc;
+}
+
+/* PRODUCTS */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.price {
+  font-size: 22px;
+  margin: 10px 0;
+  color: #00ffcc;
+}
+
+button {
+  background: #25D366;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1ebe5d;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.jpg" alt="Ghost COD Logo">
+  <h1>Ghost COD Points Seller</h1>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>80 CP</h2>
+    <div class="price">₹79</div>
+    <button onclick="order('80 CP - ₹79')">Order on WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <h2>420 CP</h2>
+    <div class="price">₹399</div>
+    <button onclick="order('420 CP - ₹399')">Order on WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <h2>880 CP</h2>
+    <div class="price">₹799</div>
+    <button onclick="order('880 CP - ₹799')">Order on WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <h2>2400 CP</h2>
+    <div class="price">₹1999</div>
+    <button onclick="order('2400 CP - ₹1999')">Order on WhatsApp</button>
+  </div>
+
+</div>
+
+<script>
+function order(product) {
+  let phone = "91XXXXXXXXXX"; // 🔥 PUT YOUR NUMBER
+  let message = "Hello, I want to buy " + product;
+  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
